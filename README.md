@@ -51,7 +51,7 @@ npm run lint -- --fix
 
 ## Demo
 
-![demo](https://github.com/PanJiaChen/PanJiaChen.github.io/blob/master/images/demo.gif)
+![demo](https://github.com/happydele/Vue-NavMenu/blob/master/src/assets/vue-navmenu.gif)
 
 ## Browsers support
 
