@@ -12,7 +12,7 @@
 git clone https://github.com/happydele/Vue-NavMenu.git
 
 # enter the project directory
-cd vue-admin-template
+cd Vue-NavMenu
 
 # install dependency
 npm install
