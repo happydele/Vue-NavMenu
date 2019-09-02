@@ -1,0 +1,30 @@
+// sidebar
+// $menuText:#bfcbd9; // 字体颜色
+// $menuActiveText:#409EFF; // 高亮文字颜色
+// $subMenuActiveText:#f4f4f5; // 当前高亮一级导航文字颜色
+
+// $menuBg:#304156; // 背景颜色
+// $menuHover:#263445; // hover背景色
+$menuText:rgba(225, 225, 225, 0.9); // 字体颜色
+$menuActiveText:#0C64EB; // 高亮文字颜色
+$subMenuActiveText:#FFFFFC; // 当前高亮一级导航文字颜色
+
+$menuBg:#0F72EF; // 背景颜色
+$menuHover:rgba(0,0,0,.1); // hover背景色
+
+$subMenuBg:#1f2d3d;
+$subMenuHover:#001528;
+
+$sideBarWidth: 210px;
+
+// the :export directive is the magic sauce for webpack
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+}
