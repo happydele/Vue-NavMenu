@@ -4,12 +4,13 @@
     <!-- 导航菜单 -->
     <sidebar class="sidebar-container" />
     <!-- 主体内容 -->
-    <div class="mainContainer">
-      <!-- <div :class="{'fixed-header':fixedHeader}">
-        <navbar />
-      </div> -->
-      <app-main />
-    </div>
+    <el-scrollbar class="app_main_scrollbar" style="height: 100%;">
+      <div class="main-container">
+        <app-main />
+      </div>
+    </el-scrollbar>
+    <!-- 回到顶部 -->
+    <el-backtop target=".app_main_scrollbar .el-scrollbar__wrap" :right="13" />
   </div>
 </template>
 
@@ -52,31 +53,5 @@ export default {
     height: 100%;
     width: 100%;
     padding-top: 60px;
-  }
-  .drawer-bg {
-    background: #000;
-    opacity: 0.3;
-    width: 100%;
-    top: 0;
-    height: 100%;
-    position: absolute;
-    z-index: 999;
-  }
-
-  .fixed-header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 9;
-    width: calc(100% - #{$sideBarWidth});
-    transition: width 0.28s;
-  }
-
-  .hideSidebar .fixed-header {
-    width: calc(100% - 54px)
-  }
-
-  .mobile .fixed-header {
-    width: 100%;
   }
 </style>

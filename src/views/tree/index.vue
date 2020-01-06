@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div class="table-container">
     <el-input v-model="filterText" placeholder="Filter keyword" style="margin-bottom:30px;" />
 
     <el-tree
@@ -75,4 +75,10 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scope>
+  .table-container{
+    padding: 60px 20px 20px;
+  }
+</style>
 

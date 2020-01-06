@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div class="form-container">
     <el-form ref="form" :model="form" label-width="120px">
       <el-form-item label="Activity name">
         <el-input v-model="form.name" />
@@ -81,5 +81,14 @@ export default {
 .line{
   text-align: center;
 }
+</style>
+
+<style lang="scss" scope>
+  .form-container{
+    padding: 60px 20px 0px;
+  }
+  .line{
+    text-align: center;
+  }
 </style>
 

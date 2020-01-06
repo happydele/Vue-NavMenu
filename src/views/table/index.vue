@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div class="table-container">
     <el-table
       v-loading="listLoading"
       :data="list"
@@ -77,3 +77,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scope>
+  .table-container{
+    padding: 60px 20px 20px;
+  }
+</style>

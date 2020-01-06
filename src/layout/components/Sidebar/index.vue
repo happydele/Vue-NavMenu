@@ -61,15 +61,18 @@ export default {
   },
   watch: {
     '$route.path': function(newVal, oldVal) {
-      const menu = JSON.parse(sessionStorage.getItem('currentMenu'))
-      if (menu) {
-        const menuIndex = JSON.parse(sessionStorage.getItem('currentMenu'))[0]
-        if (newVal.search(menuIndex) === 0) {
-          // 包含
+      const path = newVal.split('/')[1]
+      if (path === 'redirect') {
+        // 点击菜单跳转的
+        this.openMenu()
+      } else {
+        // 路由跳转的
+        if (path !== 'dashboard' && path !== 'form') {
+          sessionStorage.setItem('currentMenu', `["/${newVal.split('/')[1]}"]`)
           this.openMenu()
         } else {
-          // 不包含
-          this.$refs['elmenu'].close(menuIndex)
+          this.closeMenu()
+          sessionStorage.removeItem('currentMenu')
         }
       }
     }
@@ -100,6 +103,12 @@ export default {
       const menuIndex = JSON.parse(sessionStorage.getItem('currentMenu'))
       if (menuIndex) {
         this.$refs['elmenu'].open(menuIndex) // 打开二级菜单
+      }
+    },
+    closeMenu() {
+      const menuIndex = JSON.parse(sessionStorage.getItem('currentMenu'))[0]
+      if (menuIndex) {
+        this.$refs['elmenu'].close(menuIndex) // 关闭二级菜单
       }
     }
   }
