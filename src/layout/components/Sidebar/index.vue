@@ -106,9 +106,9 @@ export default {
       }
     },
     closeMenu() {
-      const menuIndex = JSON.parse(sessionStorage.getItem('currentMenu'))[0]
+      const menuIndex = JSON.parse(sessionStorage.getItem('currentMenu'))
       if (menuIndex) {
-        this.$refs['elmenu'].close(menuIndex) // 关闭二级菜单
+        this.$refs['elmenu'].close(menuIndex[0]) // 关闭二级菜单
       }
     }
   }
